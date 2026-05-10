@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substance | Join the Family</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="logo">SUBSTANCE</div>
+        <nav class="desktop-menu">
+            <a href="index.html">MAINBOARD</a>
+            <a href="specialities.html">SPECIALITIES</a>
+            <a href="apply.html">JOIN THE AGENCY</a>
+            <a href="loginpg.html">signup/login</a>
+        </nav>
+        <button class="mobile-toggle">☰</button>
+    </header>
+
+    <main class="form-page">
+        <section class="page-title">
+            <h1>BECOME A MODEL</h1>
+            <p>Submit your application to the Substance Casting Team.</p>
+        </section>
+
+        <section class="casting-section">
+            <div class="form-container">
+                <form id="castingForm">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Age</label>
+                            <input type="number" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Height (cm)</label>
+                            <input type="number" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Location</label>
+                        <input type="text" placeholder="e.g. Lagos, Nigeria" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Upload Photos</label>
+                        <input type="file" class="file-input" multiple>
+                    </div>
+                    <button type="submit" class="submit-btn">SUBMIT TO SUBSTANCE</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('castingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Application submitted to Substance Modeling Agency!');
+        });
+    </script>
+
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const desktopMenu = document.querySelector('.desktop-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            desktopMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
