@@ -1,0 +1,320 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --gray: #f8f8f8;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background: var(--white);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    border-bottom: 1px solid #eee;
+    background: white;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.desktop-menu a {
+    text-decoration: none;
+    color: var(--black);
+    margin-left: 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.active {
+    border-bottom: none;
+}
+
+.page-title {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: var(--gray);
+}
+
+.gallery {
+    display: grid;
+    /* Reduced min-width to ensure 3 fit on most desktop screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem 5%;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+}
+
+/* This puts the Name and Button on the same line */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes name to left, button to right */
+    align-items: center;
+    /* Centers them vertically */
+    padding: 10px 5px;
+}
+
+.card-footer p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.book-btn {
+    padding: 5px 15px;
+    cursor: pointer;
+    background: #3f84de;
+    color: #fff;
+    border: none;
+    font-size: 0.8rem;
+}
+
+/* 1. Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* Or any clean font */
+}
+
+/* 2. Navigation Styling */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #eee;
+}
+
+.desktop-menu a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.desktop-menu a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* 3. Positioning the Main Content */
+.form-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centers the whole page content */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* 4. The Form Container Layout */
+.form-container {
+    max-width: 600px;
+    /* Keeps the form from getting too wide */
+    margin: 40px auto;
+    /* Centers the form on the page */
+    text-align: left;
+    /* Aligns labels back to the left */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+/* 5. Row Layout (Age and Height) */
+.input-row {
+    display: flex;
+    gap: 20px;
+    /* Puts space between the two inputs */
+}
+
+.input-row .input-group {
+    flex: 1;
+    /* Makes both inputs take equal width */
+}
+
+/* 6. Button Style */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+.auth-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.auth-container {
+    background: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.auth-box h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.auth-box p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #333;
+}
+
+.toggle-text {
+    margin-top: 20px;
+    font-size: 0.85rem !important;
+}
+
+.toggle-text a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Mobile First Menu Hide */
+/* Base styles for mobile (default hidden) */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+        /* Hide menu by default */
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        top: 60px;
+        /* Adjust based on your header height */
+        left: 0;
+        background: #fff;
+    }
+
+    /* When JS adds the 'show' class, make it visible */
+    .desktop-menu.show {
+        display: flex;
+    }
+
+    /* Show the toggle button only on mobile */
+    .mobile-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Ensure menu is always visible on desktop */
+@media (min-width: 769px) {
+    .desktop-menu {
+        display: flex !important;
+    }
+
+    .mobile-toggle {
+        display: none;
+    }
+
+    /* .card img {
+        width: 100%;
+        height: 150px;
+        display: block;
+    }*/
+    /* Desktop Hover Effects */
+    @media (min-width: 1024px) {
+
+        /* 1. Image Hover: Slight zoom and brightness change */
+        .card {
+            overflow: hidden;
+            /* Keeps the zoom contained inside the card */
+        }
+
+        .card img {
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+            /* Subtle zoom in */
+            filter: brightness(0.9);
+            /* Slightly dims to make text pop */
+        }
+
+        /* 2. Button Hover: Change to Pink */
+        .book-btn {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background-color: #FF69B4;
+            /* Hot Pink */
+            color: #fff;
+            /* Ensures text stays white */
+            border-color: #FF69B4;
+        }
+    }
+
+}
