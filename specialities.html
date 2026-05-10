@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substance | Specialities</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="logo">SUBSTANCE</div>
+        <nav class="desktop-menu">
+            <a href="index.html">MAINBOARD</a>
+            <a href="specialities.html">SPECIALITIES</a>
+            <a href="apply.html">JOIN THE AGENCY</a>
+            <a href="loginpg.html">signup/login</a>
+        </nav>
+        <button class="mobile-toggle">☰</button>
+    </header>
+
+    <main class="grid-container">
+        <section class="page-title">
+            <h1>SPECIALITIES</h1>
+            <p>Kids, Actors, and Creative Performance Talent.</p>
+        </section>
+
+        <div class="gallery">
+            <div class="card">
+                <img src="https://unsplash.com" alt="Kids">
+                <p>ELDAD (KIDS)</p>
+            </div>
+            <div class="card">
+                <img src="https://unsplash.com" alt="Actress">
+                <p>RITA (ACTRESS)</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const desktopMenu = document.querySelector('.desktop-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            desktopMenu.classList.toggle('show');
+        });
+    </script>
+
+</body>
+
+</html>
