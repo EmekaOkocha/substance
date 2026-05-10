@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substance | Mainboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="logo">SUBSTANCE</div>
+        <nav class="desktop-menu">
+            <a href="index.html">MAINBOARD</a>
+            <a href="specialities.html">SPECIALITIES</a>
+            <a href="apply.html">JOIN THE AGENCY</a>
+            <a href="loginpg.html">signup/login</a>
+        </nav>
+        <button class="mobile-toggle">☰</button>
+    </header>
+    <main class="auth-page">
+        <div class="auth-container">
+            <!-- Login Form -->
+            <div id="login-form" class="auth-box">
+                <h1>WELCOME BACK</h1>
+                <p>Enter your details to access your dashboard.</p>
+                <form>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="email@substance.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="auth-btn">LOGIN</button>
+                </form>
+                <p class="toggle-text">New to the agency? <a href="#" onclick="toggleAuth()">Create an account</a></p>
+            </div>
+
+            <!-- Signup Form (Hidden by default) -->
+            <div id="signup-form" class="auth-box hidden">
+                <h1>JOIN THE BOARD</h1>
+                <p>Create your talent profile today.</p>
+                <form>
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="email@substance.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Create Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="auth-btn">SIGN UP</button>
+                </form>
+                <p class="toggle-text">Already have an account? <a href="#" onclick="toggleAuth()">Login here</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
