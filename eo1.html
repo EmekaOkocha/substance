@@ -31,10 +31,18 @@
     <div class="card">
         <img src="EO1.jpg">
         <div class="card-footer">
-          <p>Black Emeka's bio goes here</p>
+          <p>Bio goes here</p>
           <button class="book-btn">BOOK</button>
         </div>
     </div>
   </main>
+  <script>
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const desktopMenu = document.querySelector('.desktop-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      desktopMenu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
