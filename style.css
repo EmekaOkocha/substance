@@ -33,6 +33,9 @@ body {
     font-size: 0.8rem;
     font-weight: 700;
 }
+a {
+    text-decoration: none;
+}
 
 .active {
     border-bottom: none;
