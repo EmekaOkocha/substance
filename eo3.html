@@ -35,5 +35,13 @@
         </div>
       </div>
   </main>
+  <script>
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const desktopMenu = document.querySelector('.desktop-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      desktopMenu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
